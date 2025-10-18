@@ -9,8 +9,9 @@ func SpellingWordThousands(is_thousands bool, dig_tens, dig_ones int) (end strin
 		} else {
 			end = "и"
 		}
-		return "тысяч" + end
+		end = "тысяч" + end
 	} else {
-		return ""
+		end = ""
 	}
+	return
 }
