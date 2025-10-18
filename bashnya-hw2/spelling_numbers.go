@@ -5,23 +5,23 @@ func SpellingHundreds(dig_huns int) string {
 	case 0:
 		return ""
 	case 1:
-		return "сто"
+		return "сто "
 	case 2:
-		return "двести"
+		return "двести "
 	case 3:
-		return "триста"
+		return "триста "
 	case 4:
-		return "четыреста"
+		return "четыреста "
 	case 5:
-		return "пятьсот"
+		return "пятьсот "
 	case 6:
-		return "шестьсот"
+		return "шестьсот "
 	case 7:
-		return "семьсот"
+		return "семьсот "
 	case 8:
-		return "восемьсот"
+		return "восемьсот "
 	case 9:
-		return "девятьсот"
+		return "девятьсот "
 	default:
 		return ""
 	}
@@ -34,44 +34,44 @@ func SpellingTens(dig_tens, dig_unis int) string {
 	case 1:
 		switch dig_unis {
 		case 0:
-			return "десять"
+			return "десять "
 		case 1:
-			return "одиннадцать"
+			return "одиннадцать "
 		case 2:
-			return "двенадцать"
+			return "двенадцать "
 		case 3:
-			return "тринадцать"
+			return "тринадцать "
 		case 4:
-			return "четырнадцать"
+			return "четырнадцать "
 		case 5:
-			return "пятнадцать"
+			return "пятнадцать "
 		case 6:
-			return "шестнадцать"
+			return "шестнадцать "
 		case 7:
-			return "семнадцать"
+			return "семнадцать "
 		case 8:
-			return "восемнадцать"
+			return "восемнадцать "
 		case 9:
-			return "девятнадцать"
+			return "девятнадцать "
 		default:
 			return ""
 		}
 	case 2:
-		return "двадцать"
+		return "двадцать "
 	case 3:
-		return "тридцать"
+		return "тридцать "
 	case 4:
-		return "сорок"
+		return "сорок "
 	case 5:
-		return "пятьдесят"
+		return "пятьдесят "
 	case 6:
-		return "шестьдесят"
+		return "шестьдесят "
 	case 7:
-		return "семьдесят"
+		return "семьдесят "
 	case 8:
-		return "восемьдесят"
+		return "восемьдесят "
 	case 9:
-		return "девяносто"
+		return "девяносто "
 	default:
 		return ""
 	}
@@ -84,36 +84,36 @@ func SpellingUnits(is_thousands bool, dig_huns, dig_tens, dig_ones int) string {
 		switch dig_ones {
 		case 0:
 			if !is_thousands && dig_huns == 0 && dig_tens == 0 && dig_ones == 0 {
-				return "ноль"
+				return "ноль "
 			} else {
 				return ""
 			}
 		case 1:
 			if is_thousands {
-				return "одна"
+				return "одна "
 			} else {
-				return "один"
+				return "один "
 			}
 		case 2:
 			if is_thousands {
-				return "две"
+				return "две "
 			} else {
-				return "два"
+				return "два "
 			}
 		case 3:
-			return "три"
+			return "три "
 		case 4:
-			return "четыре"
+			return "четыре "
 		case 5:
-			return "пять"
+			return "пять "
 		case 6:
-			return "шесть"
+			return "шесть "
 		case 7:
-			return "семь"
+			return "семь "
 		case 8:
-			return "восемь"
+			return "восемь "
 		case 9:
-			return "девять"
+			return "девять "
 		default:
 			return ""
 		}
