@@ -22,6 +22,8 @@ func main() {
 		if err == nil {
 			if num >= 12307 {
 				fmt.Println(input, "не подходит, оно не меньше 12307")
+			} else if num*-1 > 12307 {
+				fmt.Println(input, "не подходит, введите число меньшее по модулю") // иначе там любое отрицательное число можно ввести, вывод бесконечный
 			} else {
 				n = num
 				break
@@ -49,5 +51,24 @@ func main() {
 			n++
 		}
 	}
+
+	digit_units := n % 10
+	digit_tens := n / 10 % 10
+	digit_hndrds := n / 100 % 10
+
+	digit_units_th := n / 1000 % 10
+	digit_tens_th := n / 10000 % 10
+	digit_hndrds_th := n / 100000
+
+	var spelling string
+	spelling += SpellingHundreds(digit_hndrds_th) + " "
+	spelling += SpellingTens(digit_tens_th, digit_units_th) + " "
+	spelling += SpellingUnits(true, digit_hndrds_th, digit_tens_th, digit_units_th) + " "
+	spelling += SpellingWordThousands(true, digit_tens_th, digit_units_th) + " "
+	spelling += SpellingHundreds(digit_hndrds) + " "
+	spelling += SpellingTens(digit_tens, digit_units) + " "
+	spelling += SpellingUnits(false, digit_hndrds, digit_tens, digit_units)
+
+	fmt.Printf("Итоговое число: %d\nЕго запись: %s", n, spelling)
 
 }
